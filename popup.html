@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helper extension</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="background.js" defer></script>
+    <style>
+
+      
+
+label{
+    font-size: 14px;
+    font-weight: 600;
+}
+.box1{
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  
+    padding: 10px;
+    
+    min-height: 200px;
+    width: 250px;
+    margin: 10px auto;
+    background: white;
+    border-radius: 5px;
+}
+
+body{
+    background-color: rgb(135, 189, 235);
+    padding:0 5px;
+}
+button{
+  display: block !important;
+  margin-top: 14px;
+}
+button:hover{
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+   <div class="box1">
+              <form action="#" method="post" id="form">
+
+                <label for="input">Email de client :</label>
+                <div id="data-container">
+
+                </div>
+                <div class="d-flex justify-content-between" >
+                  <button type="submit" id="sendMessage" class="btn btn-primary">Envoyer</button>
+                  <button id="btnLogout" class="btn btn-secondary">Logout</button>
+                </div>
+              </form>
+    
+   </div>
+</body>
+</html>

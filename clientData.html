@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+ 
+    <title>Client information</title>
+    
+    <script type="module" src="index.js" defer></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" type="text/css">
+</head>
+<body>
+
+                                
+  
+                                <div class="container bg-info bg-gradient text-light" style="margin-top: 25px;padding: 10px;border-radius: 5px;text-align: center;" id="message"></div>
+                                <div class="container containerCustom shadow border bg-light bg-gradient" style="margin-top: 20px;border-radius: 5px;">
+                                    
+                                    <form class="container " name="mrc_app_second" id="form-id"  style="padding-bottom: 15px;margin-top: 10px;" method="post"  action="#">
+                                        <table cellpadding="5" cellspacing="0" style="width:100%;padding: 10px 5px;">
+
+                                            <tr id="appl_tr" style="width:100%;">
+                                                <td valign="middle"  class="td1">
+                                                    Prénom &nbsp;:
+                                                </td>
+                                                <td  valign="middle" class="td2">
+                                                    <input type="text" name="first_name" id="first_name"
+                                                        class="form-control" value="" />
+                                                </td>
+                                            </tr>
+                                            <tr id="appl_tr" >
+                                                <td valign="middle"  >
+                                                    Nom de famille&nbsp;:
+                                                </td>
+                                                <td  valign="middle">
+                                                    <input type="text" name="last_name" id="last_name"
+                                                        class="form-control " value=""/>
+                                                </td>
+                                            </tr>
+
+                                            <tr id="appl_tr" >
+                                                <td valign="middle"  >
+                                                    Date de naissance&nbsp;:
+                                                </td>
+                                                <td valign="middle">
+                                                    <input type="date" name="dateOfBirth" class="form-control"
+                                                        id="dateOfBirth" value="">
+                                                </td>
+                                            </tr>
+                                            <tr id="pn_tr"  >
+                                                <td valign="middle"  >
+                                                    Numéro de passeport&nbsp;:
+                                                </td>
+                                                <td  valign="middle">
+                                                    <input type="text" name="passport_no" id="passport_no"
+                                                        class="form-control " value=""/>
+                                                </td>
+                                            </tr>
+                                            <tr id="pn_tr"  >
+                                                <td valign="middle"   >
+                                                    Date d'émission&nbsp;:
+                                                </td>
+                                                <td  valign="middle">
+                                                    <input type="date" name="pptIssueDate" class="form-control"
+                                                        id="pptIssueDate" value="">
+                                                </td>
+                                            </tr>
+                                            <tr id="pn_tr"  >
+                                                <td valign="middle"  >
+                                                    Date d'expiration&nbsp;:
+                                                </td>
+                                                <td  valign="middle">
+                                                    <input type="date" name="pptExpiryDate" class="form-control"
+                                                        id="pptExpiryDate" value="" >
+                                                </td>
+                                            </tr>
+                                            <tr id="pn_tr"  >
+                                                <td valign="middle"   >
+                                                    Lieu de passeport&nbsp;:
+                                                </td>
+                                                <td  valign="middle">
+                                                    <input type="text" name="pptIssuePalace" class="form-control"
+                                                        id="pptIssuePalace" value="">
+                                                </td>
+                                            </tr>
+            
+                                            <tr id="submit_tr" >
+                                                <td>&nbsp;
+                                                </td>
+                                                <td id="new">
+                                                    <button type="submit" class="btn btn-primary" id="btn">Envoyer</button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                    </form>
+                                </div>
+                    
+
+</body>
+
+</html>
