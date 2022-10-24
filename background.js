@@ -32,7 +32,7 @@ let loadDataFromServer = async (url) => {
 
   try {
     let response = await fetch(url);
-    console.log(response);
+   console.log(response)
     if (response.status === 200) {
       let data = await response.json();
       let select = createSelectElement();
@@ -44,21 +44,24 @@ let loadDataFromServer = async (url) => {
       let dataContainer = document.getElementById("data-container");
       dataContainer.appendChild(select);
       sendMessageButton.disabled = false;
-    } else if (response.status == 400) {
-      let email = prompt("Veuillez saisir adresse e-mail correcte !!");
+    } else if (response.status == 404) {
+      let email = prompt("L'adresse e-email incorrecte. Réessayer !!");
       localStorage.setItem("email", email);
       let url = "https://aphelper.herokuapp.com/api/helper/getClients/" + email;
       loadDataFromServer(url);
 
 
     } else {
-
-      alert("Client not found")
+      window.close();
+      alert("Il semble que cet utilisateur n'a aucun client associé");
+      localStorage.removeItem("email");
+      
     }
 
   } catch (e) {
 
-    alert("Impossible to contact a server")
+    alert("Impossible de contacter le serveur. Essayer de contcater votre support IT")
+    window.close();
 
 
   }
