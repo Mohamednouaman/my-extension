@@ -38,7 +38,8 @@ let loadDataFromServer = async (url) => {
       let select = createSelectElement();
       data.forEach(element => {
         let newOption = document.createElement("option");
-        newOption.innerHTML = element.email;
+            newOption.value=element.email;
+            newOption.innerHTML = element.firstName+" "+element.lastName;
         select.appendChild(newOption);
       })
       let dataContainer = document.getElementById("data-container");
@@ -78,11 +79,11 @@ loadDataFromServer("https://aphelper.herokuapp.com/api/helper/getClients/" + ema
 form.addEventListener('submit',async(e)=> {
   e.preventDefault();
   sendMessageButton.disabled = true;
-   console.log("Form submited")
+   
   const element = document.getElementsByTagName('select')[0];
-   console.log(element);
-  let email = element.options[element.selectedIndex].text;
-
+   
+  let email = element.options[element.selectedIndex].value;
+   
   let url1 = "https://aphelper.herokuapp.com/api/helper/search/clients/"+ email;
 
   try {
