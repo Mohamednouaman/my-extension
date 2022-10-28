@@ -31,13 +31,14 @@ passportNo.value = dataClient.passportNumber;
 issueDate.value = dataClient.issueDate;
 expiryDate.value = dataClient.expiryDate;
 passportPalace.value = dataClient.passportPlace;
-
+let emailClient=dataClient.email;
+let passwordClient=dataClient.password;
 
 btn.addEventListener('click', (e) => {
 
     e.preventDefault();
 
-    let data = [firstName.value, lastName.value, birthDate.value, passportNo.value, issueDate.value, expiryDate.value, passportPalace.value]
+    let data = [emailClient,passwordClient,firstName.value, lastName.value, birthDate.value, passportNo.value, issueDate.value, expiryDate.value, passportPalace.value]
 
     chrome.storage.local.set({ 'key': data });
 

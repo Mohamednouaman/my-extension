@@ -1,28 +1,31 @@
-(function InsertData(){
-chrome.storage.local.get(['key'], function(result) {
+(function InsertData() {
+  chrome.storage.local.get(['key'], function (result) {
+    let userEmail = document.getElementsByName('user_email')[0];
+    let userPassword = document.getElementsByName('user_password')[0];
+    let firstName = document.getElementById("first_name");
 
-  let firstName=document.getElementById("first_name");
+    let lastName = document.getElementById("last_name");
 
-  let lastName = document.getElementById("last_name");
+    let birthDate = document.getElementById("dateOfBirth");
 
-   let birthDate = document.getElementById("dateOfBirth");
+    let passportNo = document.getElementById("passport_no");
 
-   let passportNo = document.getElementById("passport_no");
+    let issueDate = document.getElementById("pptIssueDate");
 
-   let issueDate = document.getElementById("pptIssueDate");
+    let expiryDate = document.getElementById("pptExpiryDate");
 
-   let expiryDate = document.getElementById("pptExpiryDate");
+    let issuePalace = document.getElementById("pptIssuePalace");
 
-   let issuePalace = document.getElementById("pptIssuePalace");
-      
-       firstName.value=result.key[0];
-       lastName.value=result.key[1];
-       birthDate.value=result.key[2];
-       passportNo.value=result.key[3];
-       issueDate.value=result.key[4];
-       expiryDate.value=result.key[5];
-       issuePalace.value=result.key[6];
+    userEmail.value = result.key[0];
+    userPassword.value = result.key[1];
+    firstName.value = result.key[2];
+    lastName.value = result.key[3];
+    birthDate.value = result.key[4];
+    passportNo.value = result.key[5];
+    issueDate.value = result.key[6];
+    expiryDate.value = result.key[7];
+    issuePalace.value = result.key[8];
 
-});
+  });
 })();
 
