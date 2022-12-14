@@ -1,3 +1,4 @@
+
 (function InsertData() {
   chrome.storage.local.get(['key'], function (result) {
     let userEmail = document.getElementsByName('user_email')[0];
@@ -33,4 +34,12 @@
 
   });
 })();
+
+
+
+
+
+
+
+
 
