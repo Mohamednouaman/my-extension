@@ -48,7 +48,7 @@ let loadDataFromServer = async (url) => {
     } else if (response.status == 404) {
       let email = prompt("L'adresse e-email incorrecte. Réessayer !!");
       localStorage.setItem("email", email);
-      let url = "http://localhost:8080/api/helper/getClients/" + email;
+      let url = "https://mapphelper.herokuapp.com/api/helper/getClients/" + email;
       loadDataFromServer(url);
 
 
@@ -71,7 +71,7 @@ let loadDataFromServer = async (url) => {
 }
 
 
-loadDataFromServer("http://localhost:8080/api/helper/getClients/" + email);
+loadDataFromServer("https://mapphelper.herokuapp.com/api/helper/getClients/" + email);
 
 
 
@@ -84,7 +84,7 @@ form.addEventListener('submit',async(e)=> {
    
   let email = element.options[element.selectedIndex].value;
    
-  let url1 = "http://localhost:8080/api/helper/search/clients/"+ email;
+  let url1 = "https://mapphelper.herokuapp.com/api/helper/search/clients/"+ email;
 
   try {
     let response = await fetch(url1)
